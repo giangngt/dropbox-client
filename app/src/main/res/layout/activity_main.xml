@@ -12,13 +12,20 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#FF232425"
         android:theme="@style/ThemeOverlay.AppCompat.Dark">
-            <!--<TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home"-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:text="HOME"
+                android:textColor="#ffffff"
+                android:textStyle="normal|normal"
+                android:gravity="center">
+            </TextView>
 
             <Button
                 android:id="@+id/upload_file"
@@ -27,8 +34,9 @@
                 android:layout_toLeftOf="@id/scan_file"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="9dp"
-                android:background="@drawable/upload_file"
-                ></Button>
+                android:background="@drawable/upload_file">
+
+            </Button>
 
             <Button
                 android:id="@+id/scan_file"
@@ -42,3 +50,4 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 </RelativeLayout>
+
