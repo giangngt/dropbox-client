@@ -1,63 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_alignParentStart="true"-->
+<!--    android:layout_alignParentLeft="true"-->
+<!--    android:layout_alignParentTop="true"-->
+<!--    android:id="@+id/container"-->
+<!--    tools:context=".FilesActivity"-->
+<!--    android:background="@color/black">-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="0dp"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:id="@+id/toolbar_linear">-->
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Files"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="15dp">-->
+<!--                </TextView>-->
+<!--                <Button-->
+<!--                    android:id="@+id/upload_file"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_marginRight="9dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:background="@drawable/iconsearch">-->
+<!--                </Button>-->
+<!--            </RelativeLayout>-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+<!--        <View-->
+<!--            android:background="#666666"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp" />-->
+<!--    </LinearLayout>-->
+
+
+
+
+<!--</FrameLayout>-->
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:id="@+id/container"
-    tools:context=".FilesActivity"
-    android:background="@color/black">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"/>
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF232425"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <LinearLayout
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:text="FILES"
+                android:textColor="#ffffff"
+                android:textStyle="normal|normal"
+                android:gravity="center">
+            </TextView>
+
+            <Button
+                android:id="@+id/upload_file"
+                android:layout_width="86px"
+                android:layout_height="86px"
+                android:layout_toLeftOf="@id/scan_file"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/upload_file">
+
+            </Button>
+
+            <Button
+                android:id="@+id/scan_file"
+                android:layout_width="86px"
+                android:layout_height="86px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/scan_file"
+                ></Button>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/toolbar_linear">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/black"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        android:id="@+id/bottom_nav"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Files"
-                    android:textColor="@color/white"
-                    android:textSize="15dp">
-                </TextView>
-                <Button
-                    android:id="@+id/upload_file"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="9dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/iconsearch">
-                </Button>
-            </RelativeLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-        <View
-            android:background="#666666"
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
-    </LinearLayout>
-
-
-
-
-</FrameLayout>

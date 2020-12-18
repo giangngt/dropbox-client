@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_activity"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/photo_activity"
+        android:title="@string/photo"
+        android:icon="@drawable/ic_photo"
+        />
+    <item
+        android:id="@+id/files_activity"
+        android:title="@string/files"
+        android:icon="@drawable/ic_file"
+        />
+
+</menu>
