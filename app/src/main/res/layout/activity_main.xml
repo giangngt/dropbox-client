@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@color/black"
     >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FF232425"
+        android:background="@color/black"
         android:theme="@style/ThemeOverlay.AppCompat.Dark">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,9 +23,10 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_centerVertical="true"
-                android:text="HOME"
+                android:text="Home"
                 android:textColor="#ffffff"
-                android:textStyle="normal|normal"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal|bold"
                 android:gravity="center">
             </TextView>
 
@@ -62,5 +64,6 @@
         app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"
         />
+
 </RelativeLayout>
 
