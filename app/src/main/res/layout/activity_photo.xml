@@ -12,13 +12,16 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/black">
+        android:background="@color/black"
+        app:contentInsetStart ="0dp"
+        app:contentInsetStartWithNavigation="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/title_photo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-light"
@@ -29,18 +32,20 @@
                 android:textStyle="normal|normal" />
 
             <Button
-                android:id="@+id/upload_file"
+                android:id="@+id/select_items"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="9dp"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="9dp"
                 android:background="@drawable/select_items">
             </Button>
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
     <View
+        android:id="@+id/line"
         android:background="#666666"
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -48,6 +53,7 @@
 
 
     <LinearLayout
+        android:id="@+id/photo_row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -59,6 +65,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_weight="1"
+            android:padding="10dp"
             android:src="@drawable/avatar1" />
 
         <ImageView
@@ -66,6 +73,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_weight="1"
+            android:padding="10dp"
             android:src="@drawable/avatar2" />
 
         <ImageView
@@ -73,6 +81,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_weight="1"
+            android:padding="10dp"
             android:src="@drawable/avatar3" />
 
         <ImageView
@@ -80,6 +89,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_weight="1"
+            android:padding="10dp"
             android:src="@drawable/avatar4" />
 
         <ImageView
@@ -87,6 +97,56 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/avatar5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/photo_row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/photo_row1"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/avatar1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/avatar2" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/avatar3" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/avatar4" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:padding="10dp"
             android:src="@drawable/avatar5" />
     </LinearLayout>
 
