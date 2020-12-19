@@ -21,7 +21,7 @@ public class PhotoActivity extends AppCompatActivity {
 
         //Bottom nav
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
-        botnav.setSelectedItemId(R.id.home_activity); //set
+        botnav.setSelectedItemId(R.id.photo_activity); //set
 
         botnav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
