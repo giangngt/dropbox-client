@@ -6,7 +6,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.PopupMenu;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,6 +43,12 @@ public class AccountActivity extends AppCompatActivity {
                         return true;
                     case R.id.account_activity:
                         return true;
+                    case R.id.create_button:
+                        PopupMenu popup = new PopupMenu(AccountActivity.this, findViewById(R.id.create_button));
+                        MenuInflater inflater = popup.getMenuInflater();
+                        inflater.inflate(R.menu.create_menu, popup.getMenu());
+                        popup.show();
+                        break;
                 }
                 return false;
             }

@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.PopupMenu;
+
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -45,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), AccountActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.create_button:
+                        PopupMenu popup = new PopupMenu(MainActivity.this, findViewById(R.id.create_button));
+                        MenuInflater inflater = popup.getMenuInflater();
+                        inflater.inflate(R.menu.create_menu, popup.getMenu());
+                        popup.show();
+                        break;
                 }
                 return false;
             }

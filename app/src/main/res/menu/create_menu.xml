@@ -15,15 +15,4 @@
         android:title="Create"
         android:icon="@drawable/ic_add"
         />
-    <item
-        android:id="@+id/files_activity"
-        android:title="@string/files"
-        android:icon="@drawable/ic_file"
-        />
-    <item
-        android:id="@+id/account_activity"
-        android:title="@string/account"
-        android:icon="@drawable/account"
-        />
-
 </menu>
