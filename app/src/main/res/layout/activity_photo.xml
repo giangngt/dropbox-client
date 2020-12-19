@@ -60,45 +60,107 @@
         android:layout_below="@id/toolbar"
         android:paddingTop="10dp">
 
-        <ImageView
-            android:id="@+id/imageView1"
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar1" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:padding="10dp"
+                android:src="@drawable/avatar1" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:gravity="center"
+                android:text="avatar1.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar2" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar2" />
 
-        <ImageView
-            android:id="@+id/imageView3"
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView2"
+                android:gravity="center"
+                android:text="avatar2.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar3" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar3" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView3"
+                android:gravity="center"
+                android:text="avatar3.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar4" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar4" />
 
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView4"
+                android:gravity="center"
+                android:text="avatar4.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/item_width"
+            android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="@dimen/item_width"
             android:layout_height="@dimen/item_height"
             android:layout_weight="1"
             android:padding="10dp"
-            android:src="@drawable/avatar5" />
+            android:src="@drawable/avatar5"/>
+
+        <TextView
+            android:layout_width="@dimen/item_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView5"
+            android:gravity="center"
+            android:text="avatar5.png"
+            android:textSize="@dimen/caption_text"
+            android:textColor="@color/white"/>
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -109,45 +171,105 @@
         android:layout_below="@id/photo_row1"
         android:paddingTop="10dp">
 
-        <ImageView
-            android:id="@+id/imageView6"
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar1" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar6" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar2" />
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView6"
+                android:gravity="center"
+                android:text="avatar6.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/imageView8"
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar3" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar7" />
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar4" />
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView7"
+                android:gravity="center"
+                android:text="avatar7.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/imageView10"
+        <RelativeLayout
             android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:src="@drawable/avatar5" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar8" />
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView8"
+                android:gravity="center"
+                android:text="avatar8.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="@dimen/item_width"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar9" />
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView9"
+                android:gravity="center"
+                android:text="avatar9.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="@dimen/item_width"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/avatar10" />
+            <TextView
+                android:layout_width="@dimen/item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView10"
+                android:gravity="center"
+                android:text="avatar10.png"
+                android:textSize="@dimen/caption_text"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
