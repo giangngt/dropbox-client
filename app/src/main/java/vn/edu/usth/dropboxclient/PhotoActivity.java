@@ -37,6 +37,10 @@ public class PhotoActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), FilesActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.account_activity:
+                        startActivity(new Intent(getApplicationContext(), AccountActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return false;
             }

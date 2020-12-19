@@ -25,7 +25,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_centerVertical="true"
-                android:text="Home"
+                android:text="@string/home"
                 android:textColor="#ffffff"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="normal|bold"

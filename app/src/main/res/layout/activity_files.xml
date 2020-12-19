@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_centerVertical="true"
-                android:text="Files"
+                android:text="@string/files"
                 android:textColor="#ffffff"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="normal|normal"

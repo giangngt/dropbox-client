@@ -7,13 +7,18 @@
         />
     <item
         android:id="@+id/photo_activity"
-        android:title="@string/photo"
+        android:title="@string/photos"
         android:icon="@drawable/ic_photo"
         />
     <item
         android:id="@+id/files_activity"
         android:title="@string/files"
         android:icon="@drawable/ic_file"
+        />
+    <item
+        android:id="@+id/account_activity"
+        android:title="@string/account"
+        android:icon="@drawable/account"
         />
 
 </menu>

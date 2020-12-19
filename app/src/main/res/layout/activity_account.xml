@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        app:contentInsetStart ="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/account"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="normal|normal" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+        <View
+            android:id="@+id/line1"
+            android:background="#666666"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="@dimen/item_width"
+                    android:layout_height="@dimen/item_height"
+                    android:padding="10dp"
+                    android:src="@drawable/avatar1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/imageView1"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/account_name"
+                            android:layout_width="@dimen/item_width"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="SonTG"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="normal|bold"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/account_type"
+                            android:layout_width="@dimen/item_width"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/account_name"
+                            android:gravity="center"
+                            android:text="Dropbox Basic"
+                            android:textSize="@dimen/caption_text"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="normal|normal"
+                            android:textColor="#606162"/>
+                    </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:background="#666666"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/account_info"/>
+
+        <LinearLayout
+            android:id="@+id/account_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="@dimen/item_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Detail"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal|bold"
+                    android:paddingBottom="10dp"/>
+                <View
+                    android:id="@+id/line3"
+                    android:background="#666666"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/detail"/>
+                <LinearLayout
+                    android:id="@+id/email_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/line3"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="30dp">
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="@dimen/item_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Email"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal|normal"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/account_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="sontg@st.usth.edu.vn"
+                        android:textSize="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal|normal"
+                        android:textColor="#606162"/>
+                </LinearLayout>
+                <View
+                    android:id="@+id/line4"
+                    android:background="#666666"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/email_detail"/>
+                <LinearLayout
+                    android:id="@+id/space_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/line4"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="30dp">
+                    <TextView
+                        android:id="@+id/space"
+                        android:layout_width="@dimen/item_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Space Used"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal|normal"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/space_used"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0,2% of 2GB"
+                        android:textSize="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="normal|normal"
+                        android:textColor="#606162"/>
+                </LinearLayout>
+                <View
+                    android:id="@+id/line5"
+                    android:background="#666666"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/space_detail"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_navigation" />
+</RelativeLayout>
