@@ -6,4 +6,7 @@
     <string name="home">Home</string>
     <string name="photo">Photo</string>
     <string name="files">Files</string>
+    <string name="image">Images</string>
+    <string name="file_example1">Get Starred with Dropbox Paper.url</string>
+    <string name="file_example2">Get Starred with Dropbox Paper.pdf</string>
 </resources>
