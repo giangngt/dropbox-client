@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home_activity"
-        android:title="@string/home"
+        android:id="@+id/transfer_files"
+        android:title="@string/transfer_files"
         android:icon="@drawable/ic_home"
         />
     <item
-        android:id="@+id/photo_activity"
-        android:title="@string/photos"
+        android:id="@+id/upload_photos"
+        android:title="@string/upload_photos"
         android:icon="@drawable/ic_photo"
         />
     <item
-        android:id="@+id/create_button"
-        android:title="Create"
+        android:id="@+id/create_or_upload"
+        android:title="@string/create_or_upload"
+        android:icon="@drawable/ic_add"
+        />
+    <item
+        android:id="@+id/create_folder"
+        android:title="@string/create_folder"
         android:icon="@drawable/ic_add"
         />
 </menu>
