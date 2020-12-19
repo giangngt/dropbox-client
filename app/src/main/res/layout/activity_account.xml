@@ -53,26 +53,27 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp">
+
                 <ImageView
                     android:id="@+id/imageView1"
-                    android:layout_width="@dimen/item_width"
-                    android:layout_height="@dimen/item_height"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:padding="10dp"
                     android:src="@drawable/avatar1" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_toRightOf="@id/imageView1"
-                        android:layout_centerVertical="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/imageView1"
+                    android:layout_centerVertical="true">
 
                         <TextView
                             android:id="@+id/account_name"
-                            android:layout_width="@dimen/item_width"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="SonTG"
+                            android:gravity="left"
+                            android:text="@string/user_mail"
                             android:textSize="15dp"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|bold"
@@ -82,7 +83,7 @@
                             android:layout_width="@dimen/item_width"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/account_name"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Dropbox Basic"
                             android:textSize="@dimen/caption_text"
                             android:fontFamily="sans-serif-light"
@@ -112,15 +113,17 @@
                 android:paddingBottom="20dp">
                 <TextView
                     android:id="@+id/detail"
-                    android:layout_width="@dimen/item_width"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:text="Detail"
                     android:textSize="15dp"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="normal|bold"
-                    android:paddingBottom="10dp"/>
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp"
+                    />
                 <View
                     android:id="@+id/line3"
                     android:background="#666666"
@@ -138,9 +141,9 @@
                     android:paddingLeft="30dp">
                     <TextView
                         android:id="@+id/email"
-                        android:layout_width="@dimen/item_width"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:gravity="left"
                         android:text="Email"
                         android:textSize="15dp"
                         android:fontFamily="sans-serif-light"
@@ -151,9 +154,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="sontg@st.usth.edu.vn"
-                        android:textSize="10dp"
-                        android:fontFamily="sans-serif-light"
+                        android:text="@string/user_mail"
+                        android:textSize="@dimen/caption_text"
+                        android:fontFamily="sans-serif"
                         android:textStyle="normal|normal"
                         android:textColor="#606162"/>
                 </LinearLayout>
@@ -174,7 +177,7 @@
                     android:paddingLeft="30dp">
                     <TextView
                         android:id="@+id/space"
-                        android:layout_width="@dimen/item_width"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Space Used"
@@ -186,9 +189,9 @@
                         android:id="@+id/space_used"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:gravity="left"
                         android:text="0,2% of 2GB"
-                        android:textSize="10dp"
+                        android:textSize="@dimen/caption_text"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
                         android:textColor="#606162"/>
