@@ -33,23 +33,23 @@
 
             <Button
                 android:id="@+id/upload_file"
-                android:layout_width="86px"
-                android:layout_height="86px"
-                android:layout_toLeftOf="@id/scan_file"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_toLeftOf="@id/select_items"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/upload_file">
+                android:layout_marginRight="20dp"
+                android:background="@drawable/search">
 
             </Button>
 
             <Button
-                android:id="@+id/scan_file"
-                android:layout_width="86px"
-                android:layout_height="86px"
+                android:id="@+id/select_items"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/scan_file"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/select_items"
                 ></Button>
         </RelativeLayout>
 
