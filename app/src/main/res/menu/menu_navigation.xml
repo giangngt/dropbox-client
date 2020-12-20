@@ -6,19 +6,20 @@
         android:icon="@drawable/ic_home"
         />
     <item
-        android:id="@+id/photo_activity"
-        android:title="@string/photos"
-        android:icon="@drawable/ic_photo"
-        />
-    <item
-        android:id="@+id/create_button"
-        android:title="Create"
-        android:icon="@drawable/ic_add"
-        />
-    <item
         android:id="@+id/files_activity"
         android:title="@string/files"
         android:icon="@drawable/ic_file"
+        />
+    <item
+        android:id="@+id/create_button"
+        android:title="@string/create"
+        android:icon="@drawable/ic_add"
+        />
+
+    <item
+        android:id="@+id/photo_activity"
+        android:title="@string/photos"
+        android:icon="@drawable/ic_photo"
         />
     <item
         android:id="@+id/account_activity"

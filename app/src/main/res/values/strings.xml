@@ -15,4 +15,20 @@
     <string name="upload_photos">Upload Photos</string>
     <string name="create_or_upload">Create or Upload Files</string>
     <string name="create_folder">Create Folder</string>
+    <string name="create">Create</string>
+    <string name="space_used">Space Used</string>
+    <string name="space">0,2% of 2GB</string>
+    <string name="email">Email</string>
+    <string name="detail">Detail</string>
+    <string name="account_type">Dropbox Basic</string>
+    <string name="avatar1">avatar1.png</string>
+    <string name="avatar2">avatar2.png</string>
+    <string name="avatar3">avatar3.png</string>
+    <string name="avatar4">avatar4.png</string>
+    <string name="avatar5">avatar5.png</string>
+    <string name="avatar6">avatar6.png</string>
+    <string name="avatar7">avatar7.png</string>
+    <string name="avatar8">avatar8.png</string>
+    <string name="avatar9">avatar9.png</string>
+    <string name="avatar10">avatar10.png</string>
 </resources>

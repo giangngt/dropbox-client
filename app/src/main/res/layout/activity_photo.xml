@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView1"
                 android:gravity="center"
-                android:text="avatar1.png"
+                android:text="@string/avatar1"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView2"
                 android:gravity="center"
-                android:text="avatar2.png"
+                android:text="@string/avatar2"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView3"
                 android:gravity="center"
-                android:text="avatar3.png"
+                android:text="@string/avatar3"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView4"
                 android:gravity="center"
-                android:text="avatar4.png"
+                android:text="@string/avatar4"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -157,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView5"
             android:gravity="center"
-            android:text="avatar5.png"
+            android:text="@string/avatar5"
             android:textSize="@dimen/caption_text"
             android:textColor="@color/white"/>
         </RelativeLayout>
@@ -187,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView6"
                 android:gravity="center"
-                android:text="avatar6.png"
+                android:text="@string/avatar6"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -208,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView7"
                 android:gravity="center"
-                android:text="avatar7.png"
+                android:text="@string/avatar7"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -228,7 +228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView8"
                 android:gravity="center"
-                android:text="avatar8.png"
+                android:text="@string/avatar8"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -247,7 +247,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView9"
                 android:gravity="center"
-                android:text="avatar9.png"
+                android:text="@string/avatar9"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
@@ -266,7 +266,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView10"
                 android:gravity="center"
-                android:text="avatar10.png"
+                android:text="@string/avatar10"
                 android:textSize="@dimen/caption_text"
                 android:textColor="@color/white"/>
         </RelativeLayout>
