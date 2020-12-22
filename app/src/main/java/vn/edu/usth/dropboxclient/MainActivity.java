@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
 
     }
     public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {

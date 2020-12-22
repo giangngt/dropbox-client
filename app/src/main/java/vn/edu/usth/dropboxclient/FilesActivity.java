@@ -14,6 +14,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FilesActivity extends AppCompatActivity {
 
+    private static final int GET_FROM_GALLERY = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,32 @@ public class FilesActivity extends AppCompatActivity {
                         PopupMenu popup = new PopupMenu(FilesActivity.this, findViewById(R.id.create_button));
                         MenuInflater inflater = popup.getMenuInflater();
                         inflater.inflate(R.menu.create_menu, popup.getMenu());
+                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            public boolean onMenuItemClick(MenuItem item) {
+                                switch (item.getItemId()){
+                                    case R.id.transfer_files:
+                                        return true;
+                                    case R.id.take_photo:
+                                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                                        startActivity(intent);
+                                        return true;
+                                    case R.id.upload_photos:
+                                        startActivityForResult(
+                                                new Intent(
+                                                        Intent.ACTION_PICK,
+                                                        android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
+                                                ),
+                                                GET_FROM_GALLERY
+                                        );
+                                        return true;
+                                    case R.id.create_or_upload:
+                                        return true;
+                                    case R.id.create_folder:
+                                        return true;
+                                }
+                                return false;
+                            }
+                        });
                         popup.show();
                         break;
                 }
