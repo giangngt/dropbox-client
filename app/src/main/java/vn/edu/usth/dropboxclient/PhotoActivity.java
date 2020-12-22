@@ -3,17 +3,10 @@ package vn.edu.usth.dropboxclient;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentActivity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Point;
-import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,8 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
@@ -31,7 +22,7 @@ import android.widget.RelativeLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PhotoActivity extends AppCompatActivity {
-    private ImageButton avatar1, avatar2;
+    private ImageView avatar1, avatar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +63,8 @@ public class PhotoActivity extends AppCompatActivity {
                 return false;
             }
         });
-        avatar1 = (ImageButton)findViewById(R.id.imageView1);
-        avatar2 = (ImageButton)findViewById(R.id.imageView2);
+        avatar1 = (ImageView)findViewById(R.id.imageView1);
+        avatar2 = (ImageView)findViewById(R.id.imageView2);
         avatar1.setOnClickListener(mClick);
         avatar2.setOnClickListener(mClick);
     }
@@ -92,17 +83,19 @@ public class PhotoActivity extends AppCompatActivity {
             });
             int a = v.getId();
             Uri path;
-            if(R.id.imageView1 == a){
-                path = Uri.parse("android.resource://\"+getPackageName()+\"/drawable/avatar1");
+            if (R.id.imageView1 == a) {
+                ImageView imageView = new ImageView(PhotoActivity.this);
+                imageView.setImageResource(R.drawable.avatar1);
+                builder.addContentView(imageView, new RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT));
+            } else {
+                ImageView imageView = new ImageView(PhotoActivity.this);
+                imageView.setImageResource(R.drawable.avatar2);
+                builder.addContentView(imageView, new RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT));
             }
-            else{
-                path = Uri.parse("android.resource://\"+getPackageName()+\"/drawable/avatar2");
-            }
-            ImageView imageView = new ImageView(PhotoActivity.this);
-            imageView.setImageURI(path);
-            builder.addContentView(imageView, new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT));
             builder.show();
         }
     };
