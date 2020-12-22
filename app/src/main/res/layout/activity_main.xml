@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     android:background="@color/black">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,11 +17,32 @@
         app:contentInsetStart ="0dp"
         app:contentInsetStartWithNavigation="0dp">
 
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+<!--            <EditText-->
+<!--                android:id="@+id/searchEditText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_below="@+id/home_in_text_view"-->
+<!--                />-->
+
+<!--            <SearchView-->
+<!--                android:id="@+id/searchView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:iconifiedByDefault="false"-->
+<!--                android:queryHint="Search"-->
+<!--                android:layout_centerHorizontal="true" />-->
+
+
+
             <TextView
+                android:id="@+id/home_in_text_view"
                 android:layout_width="45dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -56,10 +78,20 @@
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_your_files"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar"
+/>
+
     <androidx.viewpager.widget.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/searchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <com.google.android.material.tabs.TabLayout
