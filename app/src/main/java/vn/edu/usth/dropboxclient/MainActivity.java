@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
         private final int PAGE_COUNT = 4;
-        private String titles[] = new String[] { "Recent", "Shared", "Starred", "Office" };
+        private String titles[] = new String[] { "Recent", "Shared", "Starred", "Offline" };
         public HomeFragmentPagerAdapter(FragmentManager fm) {
             super(fm);
         }
