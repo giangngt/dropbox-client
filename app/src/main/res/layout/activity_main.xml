@@ -89,7 +89,7 @@
         app:queryBackground="@drawable/bg_rounded"
         app:submitBackground="@drawable/bg_rounded"
         android:background="@drawable/bg_rounded"
-        android:maxWidth="380dp"
+        android:maxWidth="350dp"
         />
 
     <androidx.viewpager.widget.ViewPager

@@ -38,4 +38,5 @@
     <string name="this_month">THIS MONTH</string>
     <string name="create_paper">Create paper</string>
     <string name="search_your_files">Search your files</string>
+    <string name="take_photo">Take Photo</string>
 </resources>

@@ -7,6 +7,11 @@
         android:icon="@drawable/ic_home"
         />
     <item
+        android:id="@+id/take_photo"
+        android:title="@string/take_photo"
+        android:icon="@drawable/ic_home"
+        />
+    <item
         android:id="@+id/upload_photos"
         android:title="@string/upload_photos"
         android:icon="@drawable/ic_photo"

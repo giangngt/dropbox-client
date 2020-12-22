@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
                                 switch (item.getItemId()){
                                     case R.id.transfer_files:
                                         return true;
+                                    case R.id.take_photo:
+                                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                                        startActivity(intent);
+                                        return true;
                                     case R.id.upload_photos:
                                         startActivityForResult(
                                                 new Intent(
