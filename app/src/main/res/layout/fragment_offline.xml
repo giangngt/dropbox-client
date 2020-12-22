@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Get to your files offline"
+            android:text="@string/Get_to_your_file_offline"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:gravity="center"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Make your most impostant files available without an internet connection"
+            android:text="@string/make_your_most_impostant_files_available_without_an_internet_connection"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:gravity="center"
