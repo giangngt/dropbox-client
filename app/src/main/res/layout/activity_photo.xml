@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/container"
     tools:context=".PhotoActivity"
     android:background="@color/black">
 
@@ -63,7 +64,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView1"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -83,7 +84,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView2"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -103,7 +104,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView3"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -123,7 +124,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView4"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -144,7 +145,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView5"
             android:layout_width="@dimen/item_width"
             android:layout_height="@dimen/item_height"
@@ -174,7 +175,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView6"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -195,7 +196,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView7"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -216,7 +217,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView8"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -235,7 +236,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView9"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -254,7 +255,7 @@
         <RelativeLayout
             android:layout_width="@dimen/item_width"
             android:layout_height="wrap_content">
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView10"
                 android:layout_width="@dimen/item_width"
                 android:layout_height="@dimen/item_height"
@@ -271,7 +272,11 @@
                 android:textColor="@color/white"/>
         </RelativeLayout>
     </LinearLayout>
-
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
