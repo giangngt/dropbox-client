@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StarredFragment"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aim for the stars"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal|bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="After you star an item, it'll show up here, so it's easier to get to"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal|normal"/>
+    </LinearLayout>
+
+</RelativeLayout>

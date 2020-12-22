@@ -28,7 +28,7 @@
                 android:text="@string/account"
                 android:textColor="@color/white"
                 android:textSize="15dp"
-                android:textStyle="normal|normal" />
+                android:textStyle="normal|bold" />
 
         </RelativeLayout>
 
@@ -216,4 +216,6 @@
         app:itemTextColor="@drawable/selector"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_navigation" />
+
+
 </RelativeLayout>

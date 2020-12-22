@@ -29,7 +29,7 @@
                 android:text="@string/photos"
                 android:textColor="@color/white"
                 android:textSize="15dp"
-                android:textStyle="normal|normal" />
+                android:textStyle="normal|bold"/>
 
             <Button
                 android:id="@+id/select_items"

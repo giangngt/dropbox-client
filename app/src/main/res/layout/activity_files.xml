@@ -27,7 +27,7 @@
                 android:text="@string/files"
                 android:textColor="#ffffff"
                 android:fontFamily="sans-serif-light"
-                android:textStyle="normal|normal"
+                android:textStyle="normal|bold"
                 android:gravity="center">
             </TextView>
 
@@ -94,7 +94,8 @@
                     android:text="@string/file_example1"
                     android:textSize="@dimen/caption_text"
                     android:textColor="@color/white"
-                    />
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal|normal"/>
             </LinearLayout>
 
             <LinearLayout
@@ -124,7 +125,8 @@
                     android:text="@string/file_example2"
                     android:textSize="@dimen/caption_text"
                     android:textColor="@color/white"
-                    />
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal|normal"/>
             </LinearLayout>
 
             <LinearLayout
@@ -154,7 +156,9 @@
                     android:paddingTop="10dp"
                     android:text="@string/image"
                     android:textSize="@dimen/caption_text"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="normal|normal"/>
             </LinearLayout>
         </LinearLayout>
 
