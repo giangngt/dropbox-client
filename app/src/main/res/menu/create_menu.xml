@@ -43,6 +43,6 @@
     <item
         android:id="@+id/create_folder"
         android:title="@string/create_folder"
-        android:icon="@drawable/upload_folder"
+        android:icon="@drawable/create_folder"
         />
 </menu>
