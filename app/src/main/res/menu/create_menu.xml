@@ -9,12 +9,12 @@
     <item
         android:id="@+id/take_photo"
         android:title="@string/take_photo"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/takephoto"
         />
     <item
         android:id="@+id/upload_photos"
         android:title="@string/upload_photos"
-        android:icon="@drawable/ic_photo"
+        android:icon="@drawable/uploadphoto"
         />
     <item android:id="@+id/create_or_upload"
         android:title="@string/create_or_upload" >
@@ -43,6 +43,6 @@
     <item
         android:id="@+id/create_folder"
         android:title="@string/create_folder"
-        android:icon="@drawable/ic_add"
+        android:icon="@drawable/upload_folder"
         />
 </menu>
