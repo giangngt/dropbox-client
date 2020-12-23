@@ -23,6 +23,9 @@ import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 public class PhotoActivity extends AppCompatActivity {
     private static final int GET_FROM_GALLERY = 10;
     private ImageView avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7,avatar8,avatar9,avatar10;
@@ -59,6 +62,21 @@ public class PhotoActivity extends AppCompatActivity {
                     case R.id.create_button:
                         Context wrapper = new ContextThemeWrapper(PhotoActivity.this, R.style.MyPopupOtherStyle);
                         PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
+                        try {
+                            Field[] fields = popup.getClass().getDeclaredFields();
+                            for (Field field : fields) {
+                                if ("mPopup".equals(field.getName())) {
+                                    field.setAccessible(true);
+                                    Object menuPopupHelper = field.get(popup);
+                                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+                                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
+                                    setForceIcons.invoke(menuPopupHelper, true);
+                                    break;
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                         MenuInflater inflater = popup.getMenuInflater();
                         inflater.inflate(R.menu.create_menu, popup.getMenu());
                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {

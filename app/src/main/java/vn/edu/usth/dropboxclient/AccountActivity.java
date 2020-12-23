@@ -14,6 +14,9 @@ import android.widget.PopupMenu;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 public class AccountActivity extends AppCompatActivity {
 
     private static final int GET_FROM_GALLERY = 10;
@@ -50,6 +53,21 @@ public class AccountActivity extends AppCompatActivity {
                     case R.id.create_button:
                         Context wrapper = new ContextThemeWrapper(AccountActivity.this, R.style.MyPopupOtherStyle);
                         PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
+                        try {
+                            Field[] fields = popup.getClass().getDeclaredFields();
+                            for (Field field : fields) {
+                                if ("mPopup".equals(field.getName())) {
+                                    field.setAccessible(true);
+                                    Object menuPopupHelper = field.get(popup);
+                                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+                                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
+                                    setForceIcons.invoke(menuPopupHelper, true);
+                                    break;
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                         MenuInflater inflater = popup.getMenuInflater();
                         inflater.inflate(R.menu.create_menu, popup.getMenu());
                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
