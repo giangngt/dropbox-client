@@ -10,6 +10,7 @@ import android.widget.PopupMenu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                                 return false;
                             }
                         });
+
                         popup.show();
                         break;
                 }

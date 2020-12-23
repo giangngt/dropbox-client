@@ -58,8 +58,8 @@
 
             <Button
                 android:id="@+id/upload_file"
-                android:layout_width="86px"
-                android:layout_height="86px"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_toLeftOf="@id/scan_file"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="9dp"
@@ -69,8 +69,8 @@
 
             <Button
                 android:id="@+id/scan_file"
-                android:layout_width="86px"
-                android:layout_height="86px"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="9dp"
@@ -91,6 +91,7 @@
         app:submitBackground="@drawable/bg_rounded"
         android:background="@drawable/bg_rounded"
         android:maxWidth="350dp"
+        android:layout_marginTop="10dp"
         />
 
     <androidx.viewpager.widget.ViewPager
