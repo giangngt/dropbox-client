@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:text="@string/detail"
-                    android:textSize="@dimen/title"
+                    android:textSize="23dip"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="normal|bold"

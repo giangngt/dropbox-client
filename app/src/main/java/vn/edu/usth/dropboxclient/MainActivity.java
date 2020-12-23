@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 
@@ -46,6 +47,21 @@ public class MainActivity extends AppCompatActivity {
         pager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(pager);
+
+        Button clickButton = (Button) findViewById(R.id.upload_file);
+        clickButton.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(
+                        new Intent(
+                                Intent.ACTION_PICK,
+                                android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
+                        ),
+                        GET_FROM_GALLERY
+                );
+            }
+        });
 
         //Bottom nav
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
