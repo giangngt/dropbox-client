@@ -21,16 +21,18 @@
             android:layout_height="wrap_content"
             android:text="@string/Get_to_your_file_offline"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/medium_caption"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/text_pad"
+            android:paddingRight="@dimen/text_pad"
             android:text="@string/make_your_most_impostant_files_available_without_an_internet_connection"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/caption_text"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|normal"/>

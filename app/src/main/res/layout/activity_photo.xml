@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:text="@string/photos"
                 android:textColor="@color/white"
-                android:textSize="25sp"
+                android:textSize="@dimen/title"
                 android:textStyle="normal|bold"/>
 
             <Button
@@ -71,14 +71,14 @@
                 android:padding="10dp"
                 android:src="@drawable/avatar1" />
 
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView1"
-                android:gravity="center"
-                android:text="@string/avatar1"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView1"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar1"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -92,14 +92,14 @@
                 android:padding="10dp"
                 android:src="@drawable/avatar2" />
 
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView2"
-                android:gravity="center"
-                android:text="@string/avatar2"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView2"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar2"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="@dimen/item_width"
@@ -112,14 +112,14 @@
                 android:padding="10dp"
                 android:src="@drawable/avatar3" />
 
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView3"
-                android:gravity="center"
-                android:text="@string/avatar3"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView3"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar3"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="@dimen/item_width"
@@ -132,14 +132,14 @@
                 android:padding="10dp"
                 android:src="@drawable/avatar4" />
 
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView4"
-                android:gravity="center"
-                android:text="@string/avatar4"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView4"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar4"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -153,14 +153,14 @@
             android:padding="10dp"
             android:src="@drawable/avatar5"/>
 
-        <TextView
-            android:layout_width="@dimen/item_width"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imageView5"
-            android:gravity="center"
-            android:text="@string/avatar5"
-            android:textSize="@dimen/caption_text"
-            android:textColor="@color/white"/>
+<!--        <TextView-->
+<!--            android:layout_width="@dimen/item_width"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/imageView5"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/avatar5"-->
+<!--            android:textSize="@dimen/caption_text"-->
+<!--            android:textColor="@color/white"/>-->
         </RelativeLayout>
     </LinearLayout>
 
@@ -183,14 +183,14 @@
                 android:padding="10dp"
                 android:src="@drawable/avatar6" />
 
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView6"
-                android:gravity="center"
-                android:text="@string/avatar6"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView6"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar6"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -204,14 +204,14 @@
                 android:padding="10dp"
                 android:src="@drawable/avatar7" />
 
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView7"
-                android:gravity="center"
-                android:text="@string/avatar7"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView7"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar7"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -224,14 +224,14 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:src="@drawable/avatar8" />
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView8"
-                android:gravity="center"
-                android:text="@string/avatar8"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView8"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar8"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="@dimen/item_width"
@@ -243,14 +243,14 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:src="@drawable/avatar9" />
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView9"
-                android:gravity="center"
-                android:text="@string/avatar9"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView9"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar9"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="@dimen/item_width"
@@ -262,14 +262,14 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:src="@drawable/avatar10" />
-            <TextView
-                android:layout_width="@dimen/item_width"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView10"
-                android:gravity="center"
-                android:text="@string/avatar10"
-                android:textSize="@dimen/caption_text"
-                android:textColor="@color/white"/>
+<!--            <TextView-->
+<!--                android:layout_width="@dimen/item_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView10"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/avatar10"-->
+<!--                android:textSize="@dimen/caption_text"-->
+<!--                android:textColor="@color/white"/>-->
         </RelativeLayout>
     </LinearLayout>
 

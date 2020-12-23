@@ -1,6 +1,9 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="caption_text">15dp</dimen>
+    <dimen name="text_pad">25dp</dimen>
+    <dimen name="caption_text">15sp</dimen>
+    <dimen name="medium_caption">20sp</dimen>
+    <dimen name="title">25sp</dimen>
     <dimen name="item_width">80dp</dimen>
     <dimen name="item_height">80dp</dimen>
 </resources>

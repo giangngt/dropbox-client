@@ -67,7 +67,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/image_title"
                             android:text="@string/dropbox"
-                            android:textColor="#606162"
+                            android:textColor="@color/bright_grey"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|normal"/>
                     </LinearLayout>
@@ -133,7 +133,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/image_title"
                             android:text="@string/dropbox"
-                            android:textColor="#606162"
+                            android:textColor="@color/bright_grey"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|normal"/>
                     </LinearLayout>
@@ -173,7 +173,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/image_title"
                             android:text="@string/dropbox"
-                            android:textColor="#606162"
+                            android:textColor="@color/bright_grey"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|normal"/>
                     </LinearLayout>

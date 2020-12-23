@@ -20,16 +20,18 @@
             android:layout_height="wrap_content"
             android:text="@string/where_work_comes_together"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/medium_caption"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/text_pad"
+            android:paddingRight="@dimen/text_pad"
             android:text="@string/your_shared_folders_will_show_up_here_so_they_re_easy_to_find"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/caption_text"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|normal"/>

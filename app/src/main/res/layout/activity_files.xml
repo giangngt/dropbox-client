@@ -25,7 +25,7 @@
                 android:layout_margin="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/files"
-                android:textSize="25sp"
+                android:textSize="@dimen/title"
                 android:textColor="#ffffff"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="normal|bold"

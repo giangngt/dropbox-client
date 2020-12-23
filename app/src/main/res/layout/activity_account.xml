@@ -27,7 +27,7 @@
                 android:gravity="center"
                 android:text="@string/account"
                 android:textColor="@color/white"
-                android:textSize="25dp"
+                android:textSize="@dimen/title"
                 android:textStyle="normal|bold" />
 
         </RelativeLayout>
@@ -74,7 +74,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="left"
                             android:text="@string/user_mail"
-                            android:textSize="20dp"
+                            android:textSize="@dimen/medium_caption"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|bold"
                             android:textColor="@color/white"/>
@@ -85,10 +85,10 @@
                             android:layout_below="@id/account_name"
                             android:gravity="left"
                             android:text="@string/account_type"
-                            android:textSize="20dp"
+                            android:textSize="@dimen/medium_caption"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|normal"
-                            android:textColor="#606162"/>
+                            android:textColor="@color/bright_grey"/>
                     </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:text="@string/detail"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/title"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="normal|bold"
@@ -145,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="left"
                         android:text="@string/email"
-                        android:textSize="20dp"
+                        android:textSize="@dimen/medium_caption"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
                         android:textColor="@color/white"/>
@@ -158,7 +158,7 @@
                         android:textSize="@dimen/caption_text"
                         android:fontFamily="sans-serif"
                         android:textStyle="normal|normal"
-                        android:textColor="#777879"/>
+                        android:textColor="@color/bright_grey"/>
                 </LinearLayout>
                 <View
                     android:id="@+id/line4"
@@ -181,7 +181,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/space_used"
-                        android:textSize="20dp"
+                        android:textSize="@dimen/medium_caption"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
                         android:textColor="@color/white"/>
@@ -194,7 +194,7 @@
                         android:textSize="@dimen/caption_text"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
-                        android:textColor="#777879"/>
+                        android:textColor="@color/bright_grey"/>
                 </LinearLayout>
                 <View
                     android:id="@+id/line5"

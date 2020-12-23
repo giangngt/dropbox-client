@@ -20,16 +20,18 @@
             android:layout_height="wrap_content"
             android:text="@string/aim_for_the_stars"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/medium_caption"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/text_pad"
+            android:paddingRight="@dimen/text_pad"
             android:text="@string/after_you_star_an_item_it_ll_show_up_here_so_it_s_easier_to_get_to"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/caption_text"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|normal"/>
