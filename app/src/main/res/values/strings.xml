@@ -39,4 +39,8 @@
     <string name="create_paper">Create paper</string>
     <string name="search_your_files">Search your files</string>
     <string name="take_photo">Take Photo</string>
+    <string name="your_shared_folders_will_show_up_here_so_they_re_easy_to_find">Your shared folders will show up here so they\'re easy to find</string>
+    <string name="where_work_comes_together">Where work comes together</string>
+    <string name="aim_for_the_stars">Aim for the stars</string>
+    <string name="after_you_star_an_item_it_ll_show_up_here_so_it_s_easier_to_get_to">After you star an item, it\'ll show up here, so it\'s easier to get to</string>
 </resources>

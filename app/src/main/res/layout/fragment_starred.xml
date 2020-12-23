@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aim for the stars"
+            android:text="@string/aim_for_the_stars"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:gravity="center"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="After you star an item, it'll show up here, so it's easier to get to"
+            android:text="@string/after_you_star_an_item_it_ll_show_up_here_so_it_s_easier_to_get_to"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:gravity="center"

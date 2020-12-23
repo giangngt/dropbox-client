@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Where work comes together"
+            android:text="@string/where_work_comes_together"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:gravity="center"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your shared folders will show up here so they're easy to find"
+            android:text="@string/your_shared_folders_will_show_up_here_so_they_re_easy_to_find"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:gravity="center"
