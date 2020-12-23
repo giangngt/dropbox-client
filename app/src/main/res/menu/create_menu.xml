@@ -16,11 +16,29 @@
         android:title="@string/upload_photos"
         android:icon="@drawable/ic_photo"
         />
-    <item
-        android:id="@+id/create_or_upload"
-        android:title="@string/create_or_upload"
-        android:icon="@drawable/ic_add"
-        />
+    <item android:id="@+id/create_or_upload"
+        android:title="@string/create_or_upload" >
+        <!-- "file" submenu -->
+        <menu>
+            <item
+                android:id="@+id/create_paper"
+                android:title="@string/paper"
+                android:icon="@drawable/ic_home"
+                />
+            <item
+                android:id="@+id/create_text_file"
+                android:title="@string/text_file"
+                android:icon="@drawable/ic_home"
+                />
+            <item
+                android:id="@+id/create_upload_file"
+                android:title="@string/upload_file"
+                android:icon="@drawable/ic_home"
+                />
+        </menu>
+    </item>
+
+
 
     <item
         android:id="@+id/create_folder"

@@ -43,4 +43,7 @@
     <string name="where_work_comes_together">Where work comes together</string>
     <string name="aim_for_the_stars">Aim for the stars</string>
     <string name="after_you_star_an_item_it_ll_show_up_here_so_it_s_easier_to_get_to">After you star an item, it\'ll show up here, so it\'s easier to get to</string>
+    <string name="paper">Paper</string>
+    <string name="text_file">Text  File</string>
+    <string name="upload_file">Upload File</string>
 </resources>
