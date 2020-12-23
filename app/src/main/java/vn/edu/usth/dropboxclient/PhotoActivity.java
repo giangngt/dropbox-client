@@ -23,7 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PhotoActivity extends AppCompatActivity {
     private static final int GET_FROM_GALLERY = 10;
-    private ImageView avatar1, avatar2,avatar3,avatar4,avatar5,avatar6,avatar7,avatar8,avatar9,avatar10;
+    private ImageView avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7,avatar8,avatar9,avatar10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

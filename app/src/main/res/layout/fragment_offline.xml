@@ -11,12 +11,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerVertical="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/offlineimage"
+            android:paddingBottom="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Get_to_your_file_offline"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|bold"/>
@@ -25,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="@string/make_your_most_impostant_files_available_without_an_internet_connection"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|normal"/>

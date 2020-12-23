@@ -27,7 +27,7 @@
                 android:gravity="center"
                 android:text="@string/account"
                 android:textColor="@color/white"
-                android:textSize="15dp"
+                android:textSize="25dp"
                 android:textStyle="normal|bold" />
 
         </RelativeLayout>
@@ -56,8 +56,8 @@
 
                 <ImageView
                     android:id="@+id/imageView1"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:padding="10dp"
                     android:src="@drawable/avatar1" />
 
@@ -74,18 +74,18 @@
                             android:layout_height="wrap_content"
                             android:gravity="left"
                             android:text="@string/user_mail"
-                            android:textSize="15dp"
+                            android:textSize="20dp"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|bold"
                             android:textColor="@color/white"/>
                         <TextView
                             android:id="@+id/account_type"
-                            android:layout_width="@dimen/item_width"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/account_name"
                             android:gravity="left"
                             android:text="@string/account_type"
-                            android:textSize="@dimen/caption_text"
+                            android:textSize="20dp"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|normal"
                             android:textColor="#606162"/>
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:text="@string/detail"
-                    android:textSize="15dp"
+                    android:textSize="25dp"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="normal|bold"
@@ -145,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="left"
                         android:text="@string/email"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
                         android:textColor="@color/white"/>
@@ -158,7 +158,7 @@
                         android:textSize="@dimen/caption_text"
                         android:fontFamily="sans-serif"
                         android:textStyle="normal|normal"
-                        android:textColor="#606162"/>
+                        android:textColor="#777879"/>
                 </LinearLayout>
                 <View
                     android:id="@+id/line4"
@@ -181,7 +181,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/space_used"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
                         android:textColor="@color/white"/>
@@ -194,7 +194,7 @@
                         android:textSize="@dimen/caption_text"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="normal|normal"
-                        android:textColor="#606162"/>
+                        android:textColor="#777879"/>
                 </LinearLayout>
                 <View
                     android:id="@+id/line5"

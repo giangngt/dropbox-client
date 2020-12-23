@@ -44,13 +44,13 @@
 
             <TextView
                 android:id="@+id/home_in_text_view"
-                android:layout_width="45dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_centerVertical="true"
                 android:text="@string/home"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="25sp"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="normal|bold"
                 android:gravity="center">

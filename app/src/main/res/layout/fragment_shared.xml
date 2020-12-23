@@ -10,12 +10,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerVertical="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/shareimage"
+            android:paddingBottom="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Where work comes together"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|bold"/>
@@ -24,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Your shared folders will show up here so they're easy to find"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textStyle="normal|normal"/>

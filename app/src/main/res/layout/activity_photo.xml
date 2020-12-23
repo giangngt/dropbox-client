@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:text="@string/photos"
                 android:textColor="@color/white"
-                android:textSize="15dp"
+                android:textSize="25sp"
                 android:textStyle="normal|bold"/>
 
             <Button
