@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,7 +57,8 @@ public class PhotoActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.create_button:
-                        PopupMenu popup = new PopupMenu(PhotoActivity.this, findViewById(R.id.create_button));
+                        Context wrapper = new ContextThemeWrapper(PhotoActivity.this, R.style.MyPopupOtherStyle);
+                        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
                         MenuInflater inflater = popup.getMenuInflater();
                         inflater.inflate(R.menu.create_menu, popup.getMenu());
                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {

@@ -23,17 +23,17 @@
             <item
                 android:id="@+id/create_paper"
                 android:title="@string/paper"
-                android:icon="@drawable/ic_home"
+                android:icon="@drawable/paper"
                 />
             <item
                 android:id="@+id/create_text_file"
                 android:title="@string/text_file"
-                android:icon="@drawable/ic_home"
+                android:icon="@drawable/textfile"
                 />
             <item
                 android:id="@+id/create_upload_file"
                 android:title="@string/upload_file"
-                android:icon="@drawable/ic_home"
+                android:icon="@drawable/uploadfile"
                 />
         </menu>
     </item>

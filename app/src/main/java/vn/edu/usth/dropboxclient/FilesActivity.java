@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
@@ -46,7 +49,8 @@ public class FilesActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.create_button:
-                        PopupMenu popup = new PopupMenu(FilesActivity.this, findViewById(R.id.create_button));
+                        Context wrapper = new ContextThemeWrapper(FilesActivity.this, R.style.MyPopupOtherStyle);
+                        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
                         MenuInflater inflater = popup.getMenuInflater();
                         inflater.inflate(R.menu.create_menu, popup.getMenu());
                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {

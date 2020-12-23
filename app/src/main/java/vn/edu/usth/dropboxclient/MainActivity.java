@@ -1,8 +1,10 @@
 package vn.edu.usth.dropboxclient;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -65,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.create_button:
-                        PopupMenu popup = new PopupMenu(MainActivity.this, findViewById(R.id.create_button));
+                        Context wrapper = new ContextThemeWrapper(MainActivity.this, R.style.MyPopupOtherStyle);
+                        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
                         MenuInflater inflater = popup.getMenuInflater();
                         inflater.inflate(R.menu.create_menu, popup.getMenu());
                         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
