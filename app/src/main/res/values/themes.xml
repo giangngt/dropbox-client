@@ -16,11 +16,11 @@
 
     <style name="MyPopupOtherStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- Used for the buttons -->
-        <item name="colorAccent">@color/black</item>
+        <item name="colorAccent">@color/white</item>
         <!-- Used for the title and text -->
         <item name="android:textColorPrimary">@android:color/white</item>
         <!-- Used for the background -->
-        <item name="android:background">@color/black</item>
+        <item name="android:background">@color/menu_theme</item>
     </style>
 
     <style name="NoActionBar">
