@@ -63,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button clickButton2 = (Button) findViewById(R.id.upload_file);
+        clickButton2.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                startActivity(intent);
+            }
+        });
+
         //Bottom nav
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
         botnav.setSelectedItemId(R.id.home_activity); //set
