@@ -109,7 +109,8 @@
             app:tabIndicatorColor="@color/blue"
             app:tabSelectedTextColor="@color/blue"
             app:tabTextColor="@color/white"
-            app:tabGravity="start">
+            app:tabGravity="start"
+            >
 
             <com.google.android.material.tabs.TabItem
                 android:layout_height="wrap_content"
