@@ -38,6 +38,30 @@ public class PhotoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Bottom nav
+        bottomNavi();
+        avatar1 = (ImageView)findViewById(R.id.imageView1);
+        avatar2 = (ImageView)findViewById(R.id.imageView2);
+        avatar3 = (ImageView)findViewById(R.id.imageView3);
+        avatar4 = (ImageView)findViewById(R.id.imageView4);
+        avatar5 = (ImageView)findViewById(R.id.imageView5);
+        avatar6 = (ImageView)findViewById(R.id.imageView6);
+        avatar7 = (ImageView)findViewById(R.id.imageView7);
+        avatar8 = (ImageView)findViewById(R.id.imageView8);
+        avatar9 = (ImageView)findViewById(R.id.imageView9);
+        avatar10 = (ImageView)findViewById(R.id.imageView10);
+        avatar1.setOnClickListener(mClick);
+        avatar2.setOnClickListener(mClick);
+        avatar3.setOnClickListener(mClick);
+        avatar4.setOnClickListener(mClick);
+        avatar5.setOnClickListener(mClick);
+        avatar6.setOnClickListener(mClick);
+        avatar7.setOnClickListener(mClick);
+        avatar8.setOnClickListener(mClick);
+        avatar9.setOnClickListener(mClick);
+        avatar10.setOnClickListener(mClick);
+    }
+
+    private void bottomNavi() {
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
         botnav.setSelectedItemId(R.id.photo_activity); //set
 
@@ -60,78 +84,64 @@ public class PhotoActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.create_button:
-                        Context wrapper = new ContextThemeWrapper(PhotoActivity.this, R.style.MyPopupOtherStyle);
-                        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
-                        try {
-                            Field[] fields = popup.getClass().getDeclaredFields();
-                            for (Field field : fields) {
-                                if ("mPopup".equals(field.getName())) {
-                                    field.setAccessible(true);
-                                    Object menuPopupHelper = field.get(popup);
-                                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
-                                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
-                                    setForceIcons.invoke(menuPopupHelper, true);
-                                    break;
-                                }
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        MenuInflater inflater = popup.getMenuInflater();
-                        inflater.inflate(R.menu.create_menu, popup.getMenu());
-                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                            public boolean onMenuItemClick(MenuItem item) {
-                                switch (item.getItemId()){
-                                    case R.id.transfer_files:
-                                        return true;
-                                    case R.id.take_photo:
-                                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                                        startActivity(intent);
-                                        return true;
-                                    case R.id.upload_photos:
-                                        startActivityForResult(
-                                                new Intent(
-                                                        Intent.ACTION_PICK,
-                                                        android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
-                                                ),
-                                                GET_FROM_GALLERY
-                                        );
-                                        return true;
-                                    case R.id.create_or_upload:
-                                        return true;
-                                    case R.id.create_folder:
-                                        return true;
-                                }
-                                return false;
-                            }
-                        });
-                        popup.show();
+                        botMenuPop();
                         break;
                 }
                 return false;
             }
         });
-        avatar1 = (ImageView)findViewById(R.id.imageView1);
-        avatar2 = (ImageView)findViewById(R.id.imageView2);
-        avatar3 = (ImageView)findViewById(R.id.imageView3);
-        avatar4 = (ImageView)findViewById(R.id.imageView4);
-        avatar5 = (ImageView)findViewById(R.id.imageView5);
-        avatar6 = (ImageView)findViewById(R.id.imageView6);
-        avatar7 = (ImageView)findViewById(R.id.imageView7);
-        avatar8 = (ImageView)findViewById(R.id.imageView8);
-        avatar9 = (ImageView)findViewById(R.id.imageView9);
-        avatar10 = (ImageView)findViewById(R.id.imageView10);
-        avatar1.setOnClickListener(mClick);
-        avatar2.setOnClickListener(mClick);
-        avatar3.setOnClickListener(mClick);
-        avatar4.setOnClickListener(mClick);
-        avatar5.setOnClickListener(mClick);
-        avatar6.setOnClickListener(mClick);
-        avatar7.setOnClickListener(mClick);
-        avatar8.setOnClickListener(mClick);
-        avatar9.setOnClickListener(mClick);
-        avatar10.setOnClickListener(mClick);
     }
+
+    private void botMenuPop() {
+        Context wrapper = new ContextThemeWrapper(PhotoActivity.this, R.style.MyPopupOtherStyle);
+        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
+        try {
+            Field[] fields = popup.getClass().getDeclaredFields();
+            for (Field field : fields) {
+                if ("mPopup".equals(field.getName())) {
+                    field.setAccessible(true);
+                    Object menuPopupHelper = field.get(popup);
+                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
+                    setForceIcons.invoke(menuPopupHelper, true);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.create_menu, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.transfer_files:
+                        return true;
+                    case R.id.take_photo:
+                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.upload_photos:
+                        startActivityForResult(
+                                new Intent(
+                                        Intent.ACTION_PICK,
+                                        android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
+                                ),
+                                GET_FROM_GALLERY
+                        );
+                        return true;
+                    case R.id.create_or_upload:
+                        return true;
+                    case R.id.create_folder:
+                        return true;
+                }
+                return false;
+            }
+        });
+        popup.show();
+        return;
+    }
+
     private View.OnClickListener mClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

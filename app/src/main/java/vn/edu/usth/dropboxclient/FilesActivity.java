@@ -30,6 +30,10 @@ public class FilesActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Bottom nav
+        bottomNavi();
+    }
+
+    private void bottomNavi() {
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
         botnav.setSelectedItemId(R.id.files_activity); //set
 
@@ -52,56 +56,61 @@ public class FilesActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.create_button:
-                        Context wrapper = new ContextThemeWrapper(FilesActivity.this, R.style.MyPopupOtherStyle);
-                        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
-                        try {
-                            Field[] fields = popup.getClass().getDeclaredFields();
-                            for (Field field : fields) {
-                                if ("mPopup".equals(field.getName())) {
-                                    field.setAccessible(true);
-                                    Object menuPopupHelper = field.get(popup);
-                                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
-                                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
-                                    setForceIcons.invoke(menuPopupHelper, true);
-                                    break;
-                                }
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        MenuInflater inflater = popup.getMenuInflater();
-                        inflater.inflate(R.menu.create_menu, popup.getMenu());
-                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                            public boolean onMenuItemClick(MenuItem item) {
-                                switch (item.getItemId()){
-                                    case R.id.transfer_files:
-                                        return true;
-                                    case R.id.take_photo:
-                                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                                        startActivity(intent);
-                                        return true;
-                                    case R.id.upload_photos:
-                                        startActivityForResult(
-                                                new Intent(
-                                                        Intent.ACTION_PICK,
-                                                        android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
-                                                ),
-                                                GET_FROM_GALLERY
-                                        );
-                                        return true;
-                                    case R.id.create_or_upload:
-                                        return true;
-                                    case R.id.create_folder:
-                                        return true;
-                                }
-                                return false;
-                            }
-                        });
-                        popup.show();
+                        botMenuPop();
                         break;
                 }
                 return false;
             }
         });
+    }
+
+    private void botMenuPop() {
+        Context wrapper = new ContextThemeWrapper(FilesActivity.this, R.style.MyPopupOtherStyle);
+        PopupMenu popup = new PopupMenu(wrapper, findViewById(R.id.create_button));
+        try {
+            Field[] fields = popup.getClass().getDeclaredFields();
+            for (Field field : fields) {
+                if ("mPopup".equals(field.getName())) {
+                    field.setAccessible(true);
+                    Object menuPopupHelper = field.get(popup);
+                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
+                    setForceIcons.invoke(menuPopupHelper, true);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.create_menu, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.transfer_files:
+                        return true;
+                    case R.id.take_photo:
+                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                        startActivity(intent);
+                        return true;
+                    case R.id.upload_photos:
+                        startActivityForResult(
+                                new Intent(
+                                        Intent.ACTION_PICK,
+                                        android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
+                                ),
+                                GET_FROM_GALLERY
+                        );
+                        return true;
+                    case R.id.create_or_upload:
+                        return true;
+                    case R.id.create_folder:
+                        return true;
+                }
+                return false;
+            }
+        });
+        popup.show();
+        return;
     }
 }
