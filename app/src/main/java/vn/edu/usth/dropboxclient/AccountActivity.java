@@ -43,14 +43,17 @@ public class AccountActivity extends AppCompatActivity {
                     case R.id.home_activity:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.photo_activity:
                         startActivity(new Intent(getApplicationContext(), PhotoActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.files_activity:
                         startActivity(new Intent(getApplicationContext(), FilesActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.account_activity:
                         return true;

@@ -44,16 +44,19 @@ public class FilesActivity extends AppCompatActivity {
                     case R.id.home_activity:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.photo_activity:
                         startActivity(new Intent(getApplicationContext(), PhotoActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.files_activity:
                         return true;
                     case R.id.account_activity:
                         startActivity(new Intent(getApplicationContext(), AccountActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.create_button:
                         botMenuPop();

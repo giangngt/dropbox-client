@@ -92,10 +92,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.photo_activity:
                         startActivity(new Intent(getApplicationContext(), PhotoActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.files_activity:
                         startActivity(new Intent(getApplicationContext(), FilesActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.account_activity:
                         startActivity(new Intent(getApplicationContext(), AccountActivity.class));
@@ -103,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.create_button:
                         botMenuPop();
+                        finish();
                         break;
                 }
                 return false;
