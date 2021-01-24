@@ -1,10 +1,9 @@
 package vn.edu.usth.dropboxclient.api;
-
 import com.dropbox.core.DbxRequestConfig;
 import com.dropbox.core.http.OkHttp3Requestor;
 
 public class DbxRequestConfigFactory {
-    private static DbxRequestConfig sDbxRequestConfig = null;
+    private static DbxRequestConfig sDbxRequestConfig;
 
     public static DbxRequestConfig getRequestConfig() {
         if (sDbxRequestConfig == null) {
