@@ -23,7 +23,9 @@ import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -42,7 +44,7 @@ import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.util.List;
 
-public class FilesActivity extends AppCompatActivity {
+public class FilesActivity extends DropboxAPI {
 
     private static final int GET_FROM_GALLERY = 10;
     private static final String TAG = FilesActivity.class.getName();
@@ -69,6 +71,17 @@ public class FilesActivity extends AppCompatActivity {
 
         //Bottom nav
         bottomNavi();
+
+        String path = getIntent().getStringExtra(EXTRA_PATH);
+        mPath = path == null ? "" : path;
+
+        Button filesButton = (Button)findViewById(R.id.select_items);
+        filesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(FilesActivity.getIntent(FilesActivity.this, ""));
+            }
+        });
 
         //init picaso client
         PicassoClient.init(this,DropboxClientFactory.getClient());
@@ -264,7 +277,7 @@ public class FilesActivity extends AppCompatActivity {
         }
     }
 
-    //@Override
+    @Override
     protected void loadData() {
 
         final ProgressDialog dialog = new ProgressDialog(this);

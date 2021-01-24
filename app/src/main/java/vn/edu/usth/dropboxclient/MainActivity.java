@@ -28,21 +28,14 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 
-
 public class MainActivity extends AppCompatActivity {
 
     private static final int GET_FROM_GALLERY = 10;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button clickButton = (Button) findViewById(R.id.upload_file);
         clickButton.setOnClickListener( new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 startActivityForResult(
@@ -69,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                         ),
                         GET_FROM_GALLERY
                 );
-
             }
         });
 

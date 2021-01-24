@@ -83,7 +83,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="@string/account_type"
                             android:textSize="@dimen/medium_caption"
                             android:fontFamily="sans-serif-light"
                             android:textStyle="normal|normal"

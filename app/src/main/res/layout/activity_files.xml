@@ -55,17 +55,19 @@
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-
+    <View
+        android:id="@+id/line"
+        android:background="#666666"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/files_list" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/files_list" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
