@@ -32,6 +32,8 @@ public class FilesActivity extends AppCompatActivity {
 
         //Bottom nav
         bottomNavi();
+
+
     }
 
     private long pressedTime;
@@ -130,4 +132,6 @@ public class FilesActivity extends AppCompatActivity {
         popup.show();
         return;
     }
+
+
 }
