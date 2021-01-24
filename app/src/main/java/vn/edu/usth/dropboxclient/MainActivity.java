@@ -27,15 +27,23 @@ import com.google.android.material.tabs.TabLayout;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int GET_FROM_GALLERY = 10;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Button button = toolbar.findViewById(R.id.upload_file);
@@ -61,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         ),
                         GET_FROM_GALLERY
                 );
+
             }
         });
 
@@ -71,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 startActivity(intent);
+
             }
         });
 
@@ -125,6 +135,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void botMenuPop() {
         Context wrapper = new ContextThemeWrapper(MainActivity.this, R.style.MyPopupOtherStyle);
