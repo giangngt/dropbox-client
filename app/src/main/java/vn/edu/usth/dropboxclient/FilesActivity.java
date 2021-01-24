@@ -264,7 +264,7 @@ public class FilesActivity extends AppCompatActivity {
         }
     }
 
-    @Override
+    //@Override
     protected void loadData() {
 
         final ProgressDialog dialog = new ProgressDialog(this);

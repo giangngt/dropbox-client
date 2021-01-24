@@ -47,7 +47,7 @@ public class FilesAdapter extends RecyclerView.Adapter<FilesAdapter.MetadataView
     public MetadataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Context context = viewGroup.getContext();
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.files_item, viewGroup, false);
+                .inflate(R.layout.activity_files, viewGroup, false);
         return new MetadataViewHolder(view);
     }
 

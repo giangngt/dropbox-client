@@ -9,6 +9,8 @@ import com.dropbox.core.v2.DbxClientV2;
 import com.dropbox.core.v2.files.FileMetadata;
 import com.dropbox.core.v2.files.WriteMode;
 
+import vn.edu.usth.dropboxclient.api.UriHelpers;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -56,9 +56,10 @@
 
                 <ImageView
                     android:id="@+id/account_avatar"
-                    android:layout_width="80dp"
+                    android:layout_width="50dp"
                     android:layout_height="80dp"
-                    android:padding="10dp"
+                    android:padding="5dp"
+                    android:layout_marginRight="20dp"
                     android:src="@drawable/avatar1" />
 
                 <LinearLayout
