@@ -62,12 +62,37 @@ public class FilesActivity extends DropboxAPI {
         return filesIntent;
     }
 
+    // Storage Permissions variables
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
+    //persmission method.
+    public static void verifyStoragePermissions(Activity activity) {
+        // Check if we have read or write permission
+        int writePermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int readPermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
+
+        if (writePermission != PackageManager.PERMISSION_GRANTED || readPermission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_files);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        verifyStoragePermissions(this);
 
         //Bottom nav
         bottomNavi();
@@ -83,7 +108,7 @@ public class FilesActivity extends DropboxAPI {
             }
         });
 
-        //init picaso client
+        //init picasso client
         PicassoClient.init(this,DropboxClientFactory.getClient());
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.files_list);
         mFilesAdapter = new FilesAdapter(PicassoClient.getPicasso(), new FilesAdapter.Callback() {
@@ -145,7 +170,8 @@ public class FilesActivity extends DropboxAPI {
                         finish();
                         return true;
                     case R.id.create_button:
-                        botMenuPop();
+                        //botMenuPop();
+                        performWithPermissions(FileAction.UPLOAD);
                         break;
                 }
                 return false;
