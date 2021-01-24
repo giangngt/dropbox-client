@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.dropbox.core.v2.users.FullAccount;
 
@@ -84,9 +85,10 @@ public class LoginActivity extends DropboxAPI {
         new GetCurrentAccountTask(DropboxClientFactory.getClient(), new GetCurrentAccountTask.Callback() {
             @Override
             public void onComplete(FullAccount result) {
-//                ((TextView) findViewById(R.id.email_text)).setText(result.getEmail());
-//                ((TextView) findViewById(R.id.name_text)).setText(result.getName().getDisplayName());
-//                ((TextView) findViewById(R.id.type_text)).setText(result.getAccountType().name());
+                ((TextView) findViewById(R.id.account_email)).setText(result.getEmail());
+                ((TextView) findViewById(R.id.account_name)).setText(result.getName().getDisplayName());
+                ((TextView) findViewById(R.id.account_type)).setText(result.getAccountType().name());
+                ((TextView) findViewById(R.id.account_country)).setText(result.getCountry());
             }
             @Override
             public void onError(Exception e) {
