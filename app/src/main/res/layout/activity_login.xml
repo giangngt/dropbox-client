@@ -6,18 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:background="@color/black">
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="148dp"
-        android:layout_height="85dp"
-        android:text="Login"
-        android:background="@color/blue"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="323dp" />
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="250px"
+            >
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="650px"
+                android:layout_height="700px"
+                android:background="@drawable/dropboxlogo"
+                android:scaleType="centerInside"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="553dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                android:background="@drawable/borderbtn"
+                android:text="Sign In With Google"
+                android:textSize="15sp"
+                android:drawableLeft="@drawable/drawableleft"/>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
