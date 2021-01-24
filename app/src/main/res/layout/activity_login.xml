@@ -19,10 +19,9 @@
             >
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="650px"
+                android:layout_width="700px"
                 android:layout_height="700px"
                 android:background="@drawable/dropboxlogo"
-                android:scaleType="centerInside"
                 />
         </LinearLayout>
 
