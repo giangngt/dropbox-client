@@ -1,6 +1,8 @@
 package vn.edu.usth.dropboxclient;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -87,12 +89,15 @@ public class LoginActivity extends DropboxAPI {
         new GetCurrentAccountTask(DropboxClientFactory.getClient(), new GetCurrentAccountTask.Callback() {
             @Override
             public void onComplete(FullAccount result) {
-                ((TextView) findViewById(R.id.account_email)).setText(result.getEmail());
-                ((TextView) findViewById(R.id.account_name)).setText(result.getName().getDisplayName());
-                ((TextView) findViewById(R.id.account_type)).setText(result.getAccountType().name());
-                ((TextView) findViewById(R.id.account_country)).setText(result.getCountry());
-                new DownloadImageTask((ImageView) findViewById(R.id.account_avatar))
-                        .execute(result.getProfilePhotoUrl());
+                SharedPreferences prefs = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("name", result.getName().getDisplayName());
+                editor.putString("email", result.getEmail());
+                editor.putString("type",result.getAccountType().name());
+                editor.putString("country",result.getCountry());
+                editor.apply();
+//                new DownloadImageTask((ImageView) findViewById(R.id.account_avatar))
+//                        .execute(result.getProfilePhotoUrl());
             }
             @Override
             public void onError(Exception e) {

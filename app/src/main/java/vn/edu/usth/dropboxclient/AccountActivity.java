@@ -11,6 +11,7 @@ import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -31,6 +32,10 @@ public class AccountActivity extends AppCompatActivity {
 
         //Bottom nav
         bottomNavi();
+        ((TextView) findViewById(R.id.account_email)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("email", null));
+        ((TextView) findViewById(R.id.account_name)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("name", null));
+        ((TextView) findViewById(R.id.account_type)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("type", null));
+        ((TextView) findViewById(R.id.account_country)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("country", null));
     }
 
     private long pressedTime;
