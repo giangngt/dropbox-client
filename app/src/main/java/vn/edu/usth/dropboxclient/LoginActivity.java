@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dropbox.core.v2.users.FullAccount;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import vn.edu.usth.dropboxclient.api.DropboxAPI;
 import vn.edu.usth.dropboxclient.api.DropboxClientFactory;
 import vn.edu.usth.dropboxclient.api.GetCurrentAccountTask;
+import vn.edu.usth.dropboxclient.api.DownloadImageTask;
 
 
 /**
@@ -89,6 +91,8 @@ public class LoginActivity extends DropboxAPI {
                 ((TextView) findViewById(R.id.account_name)).setText(result.getName().getDisplayName());
                 ((TextView) findViewById(R.id.account_type)).setText(result.getAccountType().name());
                 ((TextView) findViewById(R.id.account_country)).setText(result.getCountry());
+                new DownloadImageTask((ImageView) findViewById(R.id.account_avatar))
+                        .execute(result.getProfilePhotoUrl());
             }
             @Override
             public void onError(Exception e) {
