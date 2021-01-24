@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.create_button:
                         botMenuPop();
-                        finish();
                         break;
                 }
                 return false;
