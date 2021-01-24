@@ -3,6 +3,7 @@ package vn.edu.usth.dropboxclient;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -89,6 +90,8 @@ public class LoginActivity extends DropboxAPI {
         new GetCurrentAccountTask(DropboxClientFactory.getClient(), new GetCurrentAccountTask.Callback() {
             @Override
             public void onComplete(FullAccount result) {
+                AsyncTask<String, Void, Void> download = new DownloadImageTask();
+                download.execute(result.getProfilePhotoUrl());
                 SharedPreferences prefs = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString("name", result.getName().getDisplayName());

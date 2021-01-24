@@ -6,10 +6,15 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +37,9 @@ public class AccountActivity extends AppCompatActivity {
 
         //Bottom nav
         bottomNavi();
+        String photoPath = Environment.getExternalStorageDirectory() + "/ava.jpg";
+        Bitmap ava = BitmapFactory.decodeFile(photoPath);
+        ((ImageView) findViewById(R.id.account_avatar)).setImageURI(Uri.parse(photoPath));
         ((TextView) findViewById(R.id.account_email)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("email", null));
         ((TextView) findViewById(R.id.account_name)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("name", null));
         ((TextView) findViewById(R.id.account_type)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("type", null));
