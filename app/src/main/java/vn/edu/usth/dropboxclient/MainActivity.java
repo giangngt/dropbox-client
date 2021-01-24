@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,6 +79,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    private long pressedTime;
+    @Override
+    public void onBackPressed() {
+
+        if (pressedTime + 1500 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finish();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
+    }
 
     private void bottomNavi() {
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
@@ -92,10 +105,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.photo_activity:
                         startActivity(new Intent(getApplicationContext(), PhotoActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.files_activity:
                         startActivity(new Intent(getApplicationContext(), FilesActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.account_activity:
                         startActivity(new Intent(getApplicationContext(), AccountActivity.class));
@@ -103,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.create_button:
                         botMenuPop();
+                        finish();
                         break;
                 }
                 return false;

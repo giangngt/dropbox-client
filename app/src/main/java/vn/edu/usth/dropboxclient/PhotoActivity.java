@@ -20,6 +20,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -61,6 +62,19 @@ public class PhotoActivity extends AppCompatActivity {
         avatar10.setOnClickListener(mClick);
     }
 
+    private long pressedTime;
+    @Override
+    public void onBackPressed() {
+
+        if (pressedTime + 1500 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finish();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
+    }
+
     private void bottomNavi() {
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
         botnav.setSelectedItemId(R.id.photo_activity); //set
@@ -72,16 +86,19 @@ public class PhotoActivity extends AppCompatActivity {
                     case R.id.home_activity:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.photo_activity:
                         return true;
                     case R.id.files_activity:
                         startActivity(new Intent(getApplicationContext(), FilesActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.account_activity:
                         startActivity(new Intent(getApplicationContext(), AccountActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.create_button:
                         botMenuPop();

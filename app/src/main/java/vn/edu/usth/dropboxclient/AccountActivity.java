@@ -11,6 +11,7 @@ import android.view.ContextThemeWrapper;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,6 +33,19 @@ public class AccountActivity extends AppCompatActivity {
         bottomNavi();
     }
 
+    private long pressedTime;
+    @Override
+    public void onBackPressed() {
+
+        if (pressedTime + 1500 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finish();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
+    }
+
     private void bottomNavi() {
         BottomNavigationView botnav = findViewById(R.id.bottom_nav);
         botnav.setSelectedItemId(R.id.account_activity); //set
@@ -43,14 +57,17 @@ public class AccountActivity extends AppCompatActivity {
                     case R.id.home_activity:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.photo_activity:
                         startActivity(new Intent(getApplicationContext(), PhotoActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.files_activity:
                         startActivity(new Intent(getApplicationContext(), FilesActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.account_activity:
                         return true;
