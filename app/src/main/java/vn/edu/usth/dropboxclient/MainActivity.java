@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -31,6 +30,7 @@ import java.lang.reflect.Method;
 public class MainActivity extends AppCompatActivity {
 
     private static final int GET_FROM_GALLERY = 10;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
