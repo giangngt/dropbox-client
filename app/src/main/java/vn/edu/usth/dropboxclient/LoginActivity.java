@@ -68,6 +68,7 @@ public class LoginActivity extends DropboxAPI {
 
         if (hasToken()) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
         }
 //            findViewById(R.id.login_button).setVisibility(View.GONE);
 //            findViewById(R.id.email_text).setVisibility(View.VISIBLE);
