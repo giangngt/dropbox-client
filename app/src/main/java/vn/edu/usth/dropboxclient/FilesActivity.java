@@ -109,7 +109,7 @@ public class FilesActivity extends DropboxAPI {
         });
 
         //init picasso client
-        //PicassoClient.init(this,DropboxClientFactory.getClient());
+        PicassoClient.init(this,DropboxClientFactory.getClient());
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.files_list);
         mFilesAdapter = new FilesAdapter(PicassoClient.getPicasso(), new FilesAdapter.Callback() {
             @Override
@@ -304,7 +304,8 @@ public class FilesActivity extends DropboxAPI {
     }
 
     @Override
-    protected void loadData() {
+    protected
+    void loadData() {
 
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
