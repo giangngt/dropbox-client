@@ -62,28 +62,7 @@ public class FilesActivity extends DropboxAPI {
         return filesIntent;
     }
 
-    // Storage Permissions variables
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
-    };
 
-    //persmission method.
-    public static void verifyStoragePermissions(Activity activity) {
-        // Check if we have read or write permission
-        int writePermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        int readPermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
-
-        if (writePermission != PackageManager.PERMISSION_GRANTED || readPermission != PackageManager.PERMISSION_GRANTED) {
-            // We don't have permission so prompt the user
-            ActivityCompat.requestPermissions(
-                    activity,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
-            );
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,8 +70,6 @@ public class FilesActivity extends DropboxAPI {
         setContentView(R.layout.activity_files);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        verifyStoragePermissions(this);
 
         //Bottom nav
         bottomNavi();
@@ -109,7 +86,7 @@ public class FilesActivity extends DropboxAPI {
         });
 
         //init picasso client
-        PicassoClient.init(this,DropboxClientFactory.getClient());
+        PicassoClient.init(this, DropboxClientFactory.getClient());
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.files_list);
         mFilesAdapter = new FilesAdapter(PicassoClient.getPicasso(), new FilesAdapter.Callback() {
             @Override
@@ -304,8 +281,7 @@ public class FilesActivity extends DropboxAPI {
     }
 
     @Override
-    protected
-    void loadData() {
+    protected void loadData() {
 
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -372,6 +348,7 @@ public class FilesActivity extends DropboxAPI {
         String type = mime.getMimeTypeFromExtension(ext);
 
         //intent.setDataAndType(Uri.fromFile(result), type);
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setDataAndType(FileProvider.getUriForFile(FilesActivity.this,
                 BuildConfig.APPLICATION_ID + ".provider",
                 result), type);
