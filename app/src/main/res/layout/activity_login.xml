@@ -35,9 +35,10 @@
                 android:layout_width="250dp"
                 android:layout_height="55dp"
                 android:background="@drawable/borderbtn"
-                android:text="Sign In With Google"
-                android:textSize="15sp"
-                android:drawableLeft="@drawable/drawableleft"/>
+                android:text="Sign In"
+                android:textSize="15sp"/>
+<!--                android:drawableLeft="@drawable/drawableleft"-->
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
