@@ -39,7 +39,11 @@ public class AccountActivity extends AppCompatActivity {
         bottomNavi();
         String photoPath = Environment.getExternalStorageDirectory() + "/ava.jpg";
         Bitmap ava = BitmapFactory.decodeFile(photoPath);
-        ((ImageView) findViewById(R.id.account_avatar)).setImageURI(Uri.parse(photoPath));
+        if (ava != null){
+            ((ImageView) findViewById(R.id.account_avatar)).setImageURI(Uri.parse(photoPath));}
+        else{
+            ((ImageView) findViewById(R.id.account_avatar)).setImageResource(R.drawable.avatar1);
+        }
         ((TextView) findViewById(R.id.account_email)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("email", null));
         ((TextView) findViewById(R.id.account_name)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("name", null));
         ((TextView) findViewById(R.id.account_type)).setText(getSharedPreferences("user",Context.MODE_PRIVATE).getString("type", null));
