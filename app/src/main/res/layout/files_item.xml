@@ -21,6 +21,7 @@
         android:id="@+id/text"
         android:maxLines="1"
         android:textSize="18sp"
+        android:textColor="@color/white"
         android:layout_marginStart="@dimen/global_padding"
         android:layout_gravity="center_vertical"
         android:layout_width="match_parent"
