@@ -31,10 +31,6 @@ public class LoginActivity extends DropboxAPI {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-//        setSupportActionBar(toolbar);
-
         Button loginButton = (Button)findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -43,23 +39,6 @@ public class LoginActivity extends DropboxAPI {
                 DropboxAPI.startOAuth2Authentication(LoginActivity.this, getString(R.string.app_key), Arrays.asList("account_info.read", "files.content.write", "files.content.read"));
             }
         });
-
-//        Button filesButton = (Button)findViewById(R.id.files_button);
-//        filesButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(FilesActivity.getIntent(UserActivity.this, ""));
-//            }
-//        });
-//
-//        Button openWithButton = (Button)findViewById(R.id.open_with);
-//        openWithButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent openWithIntent = new Intent(UserActivity.this, OpenWithActivity.class);
-//                startActivity(openWithIntent);
-//            }
-//        });
     }
 
     @Override
@@ -70,20 +49,6 @@ public class LoginActivity extends DropboxAPI {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
-//            findViewById(R.id.login_button).setVisibility(View.GONE);
-//            findViewById(R.id.email_text).setVisibility(View.VISIBLE);
-//            findViewById(R.id.name_text).setVisibility(View.VISIBLE);
-//            findViewById(R.id.type_text).setVisibility(View.VISIBLE);
-//            findViewById(R.id.files_button).setEnabled(true);
-//            findViewById(R.id.open_with).setEnabled(true);
-//        } else {
-//            findViewById(R.id.login_button).setVisibility(View.VISIBLE);
-//            findViewById(R.id.email_text).setVisibility(View.GONE);
-//            findViewById(R.id.name_text).setVisibility(View.GONE);
-//            findViewById(R.id.type_text).setVisibility(View.GONE);
-//            findViewById(R.id.files_button).setEnabled(false);
-//            findViewById(R.id.open_with).setEnabled(false);
-//        }
     }
 
     @Override
@@ -100,8 +65,6 @@ public class LoginActivity extends DropboxAPI {
                 editor.putString("type",result.getAccountType().name());
                 editor.putString("country",result.getCountry());
                 editor.apply();
-//                new DownloadImageTask((ImageView) findViewById(R.id.account_avatar))
-//                        .execute(result.getProfilePhotoUrl());
             }
             @Override
             public void onError(Exception e) {

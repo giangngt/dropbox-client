@@ -346,8 +346,6 @@ public class FilesActivity extends DropboxAPI {
         MimeTypeMap mime = MimeTypeMap.getSingleton();
         String ext = result.getName().substring(result.getName().indexOf(".") + 1);
         String type = mime.getMimeTypeFromExtension(ext);
-
-        //intent.setDataAndType(Uri.fromFile(result), type);
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setDataAndType(FileProvider.getUriForFile(FilesActivity.this,
                 BuildConfig.APPLICATION_ID + ".provider",
